@@ -46,3 +46,19 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+//variables
+$brand-font: 'Open Sans', sans-serif;
+$brand-backgroundColor: black;
+$brand-color: #ffffff;
+$brand-footerColor: #c2c2c2;
+$brand-fontSize: 16px;
+
+
+body {
+    font-family: $brand-font;
+    font-weight: 300;
+    font-size: $brand-fontSize;
+    color: $brand-color;
+    background-color: $brand-backgroundColor;
+}

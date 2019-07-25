@@ -13,9 +13,4 @@ ehthumbs.db
 node_modules/
 # Ignore PerfTool #
 # =============== #
-gulpfile.js
-package.json
 perf-tool/
-# Ignore Folders #
-# =============== #
-/assets

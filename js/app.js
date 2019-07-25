@@ -4,6 +4,4 @@ $(function () {
         let $selection = $('.menu').val()
         console.log($selection)
     })
-
-
 })
