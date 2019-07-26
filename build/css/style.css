@@ -51,3 +51,22 @@ body {
   font-size: 16px;
   color: #ffffff;
   background-color: black; }
+
+.container {
+  margin: 275px 18% 200px 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .container h4 {
+    margin: 15px 0; }
+
+footer {
+  margin: 0 10% 20% 10%;
+  text-align: center; }

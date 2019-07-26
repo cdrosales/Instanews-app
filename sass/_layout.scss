@@ -1,3 +1,24 @@
+.container{
+    margin: 275px 18% 200px 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    h4 {
+        margin: 15px 0;
+    }
+}
 
+footer{
+    margin: 0 10% 20% 10%;
+    text-align: center;
+}
 
-// sass --watch sass/style.scss:css/style.css
+@media only screen and (min-width:600px) { 
+
+    
+
+}
+
+@media only screen and (min-width:1240px) { 
+}

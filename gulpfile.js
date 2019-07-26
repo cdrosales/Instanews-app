@@ -23,7 +23,7 @@ gulp.task("eslint", function(){
 gulp.task('sass', function() {
     return gulp
     //locats scss files
-    .src("./sass/style.scss")
+    .src("./sass/*.scss")
     //convers sass to css
     .pipe(sass())
     //adds prefixes or browser compatibility
