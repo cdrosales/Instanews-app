@@ -70,3 +70,18 @@ body {
 footer {
   margin: 0 10% 20% 10%;
   text-align: center; }
+
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 275px 20% 200px 10%;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-areas: "img div . . . . . . . ."; } }
+
+@media only screen and (min-width: 1240px) {
+  .container {
+    margin: 275px 8% 200px 8%;
+    grid-template-areas: "img div . . . . . . . . "; }
+  footer {
+    margin: 0 10% 20% 15%;
+    text-align: left; } }
