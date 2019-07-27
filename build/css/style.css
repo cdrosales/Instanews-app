@@ -53,7 +53,7 @@ body {
   background-color: black; }
 
 .container {
-  margin: 275px 18% 200px 18%;
+  margin: 225px 18% 250px 18%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -66,22 +66,42 @@ body {
           align-items: center; }
   .container h4 {
     margin: 15px 0; }
+  .container .menu {
+    margin: 0 20px; }
 
 footer {
-  margin: 0 10% 20% 10%;
-  text-align: center; }
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  footer .footerText {
+    margin: 0 0 0 3px;
+    text-transform: uppercase; }
 
 @media only screen and (min-width: 600px) {
   .container {
-    margin: 275px 20% 200px 10%;
+    margin: 250px 9%;
     display: grid;
     grid-gap: 0px;
-    grid-template-areas: "img div . . . . . . . ."; } }
+    grid-template-areas: "img div . . . . . . . ."; }
+    .container menu {
+      margin: 0 0; } }
 
 @media only screen and (min-width: 1240px) {
   .container {
-    margin: 275px 8% 200px 8%;
+    margin-left: 3%;
     grid-template-areas: "img div . . . . . . . . "; }
   footer {
-    margin: 0 10% 20% 15%;
-    text-align: left; } }
+    margin: 8% 10% 5% 3%;
+    padding-top: 25px;
+    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
