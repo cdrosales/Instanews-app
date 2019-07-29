@@ -21,9 +21,8 @@ $(function () {
         $(".item10").append(`<img src="${data.results[9].multimedia[3].url}"><p>${data.results[9].multimedia[3].caption}</p>`);
         $(".item11").append(`<img src="${data.results[10].multimedia[3].url}"><p>${data.results[10].multimedia[3].caption}</p>`);
         $(".item12").append(`<img src="${data.results[11].multimedia[3].url}"><p>${data.results[11].multimedia[3].caption}</p>`);
-        
 
-
+        $(".menu").reset();
     })
 
              .fail(function(){

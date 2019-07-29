@@ -25,6 +25,11 @@ footer{
     }
 }
 
+.newsContainer {
+    display:grid;
+    grid-template-rows: repeat(12, 300px);
+}
+
 
 //TABLET
 @media only screen and (min-width:600px) { 
@@ -40,6 +45,12 @@ footer{
             margin: 0 0;
         }
     }
+
+    .newsContainer {
+        grid-template-columns: repeat(3, minmax(310px,100px));
+        grid-template-rows: repeat(4, 300px);
+    }
+    
 }
 
 //DESKTOP VIEW
@@ -54,5 +65,9 @@ footer{
         padding-top: 25px;
         text-align: left;
         justify-content: flex-start;
+    }
+    .newsContainer{
+        grid-template-columns: repeat(4, minmax(310px,100px));
+        grid-template-rows: repeat(3, 300px);
     }
 }
