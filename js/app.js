@@ -10,6 +10,19 @@ $(function () {
           console.log(data.results)
 
         $(".item1").append(`<img src="${data.results[0].multimedia[3].url}"><p>${data.results[0].multimedia[3].caption}</p>`);
+        $(".item2").append(`<img src="${data.results[1].multimedia[3].url}"><p>${data.results[1].multimedia[3].caption}</p>`);
+        $(".item3").append(`<img src="${data.results[2].multimedia[3].url}"><p>${data.results[2].multimedia[3].caption}</p>`);
+        $(".item4").append(`<img src="${data.results[3].multimedia[3].url}"><p>${data.results[3].multimedia[3].caption}</p>`);
+        $(".item5").append(`<img src="${data.results[4].multimedia[3].url}"><p>${data.results[4].multimedia[3].caption}</p>`);
+        $(".item6").append(`<img src="${data.results[5].multimedia[3].url}"><p>${data.results[5].multimedia[3].caption}</p>`);
+        $(".item7").append(`<img src="${data.results[6].multimedia[3].url}"><p>${data.results[6].multimedia[3].caption}</p>`);
+        $(".item8").append(`<img src="${data.results[7].multimedia[3].url}"><p>${data.results[7].multimedia[3].caption}</p>`);
+        $(".item9").append(`<img src="${data.results[8].multimedia[3].url}"><p>${data.results[8].multimedia[3].caption}</p>`);
+        $(".item10").append(`<img src="${data.results[9].multimedia[3].url}"><p>${data.results[9].multimedia[3].caption}</p>`);
+        $(".item11").append(`<img src="${data.results[10].multimedia[3].url}"><p>${data.results[10].multimedia[3].caption}</p>`);
+        $(".item12").append(`<img src="${data.results[11].multimedia[3].url}"><p>${data.results[11].multimedia[3].caption}</p>`);
+        
+
 
     })
 
