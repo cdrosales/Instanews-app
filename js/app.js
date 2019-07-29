@@ -5,11 +5,11 @@ $(function () {
         console.log($selection)
 
 
-        $.getJSON("https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e")
+        $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$selection}.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e`)
         .done(function(data) {
           console.log(data.results)
 
-        $(".results").append(`<img src="${data.results[0].multimedia[3].url}"><p>${data.results[0].multimedia[3].caption}</p>`);
+        $(".item1").append(`<img src="${data.results[0].multimedia[3].url}"><p>${data.results[0].multimedia[3].caption}</p>`);
 
     })
 
