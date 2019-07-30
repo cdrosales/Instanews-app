@@ -86,8 +86,12 @@ footer {
     text-transform: uppercase; }
 
 .newsContainer {
-  display: grid;
-  grid-template-rows: repeat(12, 300px); }
+  display: grid none;
+  grid-template-rows: repeat(12, 400px); }
+  .newsContainer img {
+    background-size: cover;
+    width: 310px;
+    height: 250px; }
 
 @media only screen and (min-width: 600px) {
   .container {
@@ -99,7 +103,7 @@ footer {
       margin: 0 0; }
   .newsContainer {
     grid-template-columns: repeat(3, minmax(310px, 100px));
-    grid-template-rows: repeat(4, 300px); } }
+    grid-template-rows: repeat(4, 400px); } }
 
 @media only screen and (min-width: 1240px) {
   .container {
@@ -114,4 +118,4 @@ footer {
             justify-content: flex-start; }
   .newsContainer {
     grid-template-columns: repeat(4, minmax(310px, 100px));
-    grid-template-rows: repeat(3, 300px); } }
+    grid-template-rows: repeat(3, 400px); } }
