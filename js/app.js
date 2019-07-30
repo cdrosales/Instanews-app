@@ -4,21 +4,22 @@ $(function () {
 
 
     $(".menu").on("change", function(event){
-        let $selection = $('.menu').val()
-        console.log($selection)
+      let $selection = $('.menu').val()
+      console.log($selection)
 
+      // let $target = event.target
+      // console.log($(event.target).val())
 
-        $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$selection}.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e`)
-        .done(function(data) {
-          console.log(data.results)
+      $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$selection}.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e`)
+      .done(function(data) {
+      // console.log(data.results)
 
         let $newsC = $(".newsContainer")
-        console.log($newsC)
+        // console.log($newsC)
       
         $newsC.hide()
-
         $newsC.toggle('fast').show()
-
+       
 
         $(".item1").append(`<img src="${data.results[0].multimedia[4].url}"><p>${data.results[0].multimedia[4].caption}</p>`);
         $(".item2").append(`<img src="${data.results[1].multimedia[4].url}"><p>${data.results[1].multimedia[4].caption}</p>`);
