@@ -19,22 +19,20 @@ $(function () {
       let $results = (data.results)
       // console.log($results)
 
-
       for (let $i=0; $i < $($results).length; $i++) {
          for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
-          // for (let $j=0; $j < $($results[$i].multimedia[4][" "]).length; $j++) {
 
-        //   for (let $k=0; $k < $($results)[$i][$j].length; $k++) {
-        //     for (let $l=0; $l < $($results)[$i][$j][$k].length; $l++) {
-
-          
               let $img = $results[$i].multimedia[4].url
               console.log($img)
 
-      $(".results").append(`<img src="${$img}">`)
+              let $caption = $results[$i].multimedia[4].caption
+              console.log($caption)
+              
+    
+      $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`)
 
-        //     }
-          // }        
+
+      
         } 
       }
 
@@ -62,11 +60,6 @@ $(function () {
       // let $results = (data.results)
       // console.log($results)
 
-
-
-
-
-    
 
         // let $url = $results.multimedia[4]
         // console.log($url)
