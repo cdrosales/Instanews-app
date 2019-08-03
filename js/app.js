@@ -23,12 +23,16 @@ $(function () {
          for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
 
               let $img = $results[$i].multimedia[4].url
-              console.log($img)
+              // console.log($img)
 
               let $caption = $results[$i].multimedia[4].caption
-              console.log($caption)
+              // console.log($caption)
               
-    
+          // if ($caption === "") {
+          //   return false;
+          //   console.log($caption)
+        
+          // } 
       $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`)
 
 
