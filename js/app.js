@@ -26,14 +26,15 @@ $(function () {
               // console.log($img)
 
               let $caption = $results[$i].multimedia[4].caption
-              // console.log($caption)
+              console.log($caption)
               
-          // if ($caption === "") {
-          //   return false;
-          //   console.log($caption)
-        
-          // } 
-      $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`)
+              let $empty = ""
+              // console.log($empty)
+
+          if ($caption == $empty) {
+            console.log("worked")
+          } 
+      // $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`)
 
 
       
