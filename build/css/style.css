@@ -70,6 +70,7 @@ body {
     margin: 0 20px; }
 
 footer {
+  height: 100px;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,6 +89,7 @@ footer {
 .newsContainer {
   display: none; }
   .newsContainer .results {
+    display: grid;
     height: 400px; }
     .newsContainer .results img {
       background-position: center;
@@ -114,8 +116,8 @@ footer {
     margin-left: 3%;
     grid-template-areas: "img div . . . . . . . . "; }
   footer {
-    margin: 8% 10% 5% 3%;
     padding-top: 25px;
+    padding-left: 30px;
     text-align: left;
     -webkit-box-pack: start;
         -ms-flex-pack: start;
