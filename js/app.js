@@ -25,20 +25,19 @@ $(function () {
               // console.log($caption)
 
               let $type = $results[$i].multimedia[4].type
-              console.log($type)
+              // console.log($type)
           
-              let $noImg =$results[$i].multimedia
-              console.log($noImg)
-              // let $empty = ""
-              // console.log($empty)
-
+              let $noImg =$results[$i].multimedia[$i]
+              // console.log($noImg)
 
               if ($type === "image"){
-                // console.log($type)
+                $type = true;
+
                 $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
-              } else {
-                return;
-              }
+              } else if ($type >= 12){
+                return false;
+                console.log("12")
+              } 
           }
         }
 
