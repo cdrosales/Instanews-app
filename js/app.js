@@ -25,8 +25,10 @@ $(function () {
               // console.log($caption)
 
               let $type = $results[$i].multimedia[4].type
-              // console.log($type)
+              console.log($type)
           
+              let $noImg =$results[$i].multimedia
+              console.log($noImg)
               // let $empty = ""
               // console.log($empty)
 
@@ -34,7 +36,10 @@ $(function () {
               if ($type === "image"){
                 // console.log($type)
                 $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
+              } else {
+                return;
               }
+          }
         }
 
               let $newsC = $(".newsContainer")
