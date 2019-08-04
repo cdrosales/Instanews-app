@@ -82,7 +82,7 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 50px; }
+  padding-top: 30px; }
   footer .footerText {
     margin: 0 0 0 3px;
     text-transform: uppercase; }
@@ -111,26 +111,11 @@ footer {
         background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); }
 
 @media only screen and (min-width: 600px) {
-  @-webkit-keyframes bounce-me {
-    0% { }
-    100% {
-      -webkit-transform: translate(0, -220px) scale(1, 1);
-              transform: translate(0, -220px) scale(1, 1); } }
-  @keyframes bounce-me {
-    0% { }
-    100% {
-      -webkit-transform: translate(0, -220px) scale(1, 1);
-              transform: translate(0, -220px) scale(1, 1); } }
-  .bouncy-bouncy {
-    -webkit-animation-duration: 1.5s;
-            animation-duration: 1.5s;
-    -webkit-animation-name: bounce-me;
-            animation-name: bounce-me; }
   .container {
     margin: 250px 9%;
     display: grid;
     grid-gap: 0px;
-    grid-template-areas: "img div . . . . . . . ."; }
+    grid-template-columns: 45% 55%; }
     .container menu {
       margin: 0 0; }
   .results {
@@ -141,7 +126,7 @@ footer {
 @media only screen and (min-width: 1240px) {
   .container {
     margin-left: 3%;
-    grid-template-areas: "img div . . . . . . . . "; }
+    grid-template-columns: 25% 25% 50%; }
   footer {
     padding-top: 25px;
     padding-left: 30px;
@@ -153,3 +138,26 @@ footer {
     display: grid;
     grid-template-columns: repeat(4, minmax(310px, 100%));
     grid-template-rows: repeat(3, 400px); } }
+
+@media only screen and (min-width: 600px) {
+  @-webkit-keyframes resize {
+    0% {
+      margin-top: 50px;
+      margin-bottom: 50px; }
+    100% {
+      margin-top: 50px;
+      margin-bottom: 50px; } }
+  @keyframes resize {
+    0% {
+      margin-top: 50px;
+      margin-bottom: 50px; }
+    100% {
+      margin-top: 50px;
+      margin-bottom: 50px; } }
+  .backgroundResize {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-name: resize;
+            animation-name: resize;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; } }

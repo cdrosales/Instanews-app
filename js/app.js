@@ -4,8 +4,12 @@ $(function () {
       let $selection = $('.menu').val()
       console.log($selection)
 
-      $(".container").toggleClass("bouncy-bouncy");
+    // $(".logo").toggleClass("imgResize");
+    $(".container").toggleClass("backgroundResize");
 
+
+
+       
       // let $target = event.target
       // console.log($(event.target).val())
     
