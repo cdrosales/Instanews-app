@@ -2,7 +2,9 @@ $(function () {
 
     $(".menu").on("change", function(event){
       let $selection = $('.menu').val()
-      // console.log($selection)
+      console.log($selection)
+
+      $(".container").toggleClass("bouncy-bouncy");
 
       // let $target = event.target
       // console.log($(event.target).val())
@@ -18,31 +20,21 @@ $(function () {
             for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
 
               let $img = $results[$i].multimedia[4].url
-              // console.log($img)
 
-              // let $caption = $results[$i].multimedia[4].caption
               let $caption = $results[$i].abstract
-              // console.log($caption)
 
               let $type = $results[$i].multimedia[4].type
-              // console.log($type)
-          
-              let $noImg =$results[$i].multimedia[$i]
-              // console.log($noImg)
-
+ 
               if ($type === "image"){
                 $type = true;
-
-                $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
-              } else if ($type >= 12){
-                return false;
-                console.log("12")
+              $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
+              } 
+              if ($($results).length > 12){
+               console.log("theres more than 12")
               } 
           }
         }
-
               let $newsC = $(".newsContainer")
-              // console.log($newsC)
               $newsC.hide()   
               $newsC.toggle('slow').show()
       })
