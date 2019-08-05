@@ -6,6 +6,8 @@ $(function () {
 
     $(".logo").toggleClass("imgResize");
     $(".container").toggleClass("containerResize");
+    $(".selection").toggleClass("changeSelection");
+
 
       let $target = $(event.target).val()
       console.log($target)

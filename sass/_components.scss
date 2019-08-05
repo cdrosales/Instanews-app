@@ -19,7 +19,7 @@
 
     @keyframes resizeImg {
         0%{
-          transform: scale(0.5, 0.5);
+          transform: scale(0.5, 0.5); 
           padding-left: 70px;
         }
        100% {
@@ -40,12 +40,42 @@
   @keyframes resizeImg {
     0%{
       transform: scale(0.5, 0.5);
-      padding-left: 0;
+      padding-left: 70px;
+      // margin-left: -25%;
     }
    100% {
     transform: scale(0.5, 0.5);
-    padding-left: 0;
+    padding-left: 70px;
+    // margin-left: -25%;
+
     }
   }
+
+  @keyframes resize {
+    0%{
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px;
+    }
+   100% {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px
+    }
+}
+
+  @keyframes moveSelection {
+    0% {
+      margin-left: -50px;
+    }
+    100% {
+      margin-left: -50px;
+    }
+  }
+  .changeSelection {
+    animation-duration: 1.5s;
+    animation-name: moveSelection;
+    animation-iteration-count: infinite;
+}
 }
     

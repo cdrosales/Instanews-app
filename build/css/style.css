@@ -194,17 +194,52 @@ footer {
     0% {
       -webkit-transform: scale(0.5, 0.5);
               transform: scale(0.5, 0.5);
-      padding-left: 0; }
+      padding-left: 70px; }
     100% {
       -webkit-transform: scale(0.5, 0.5);
               transform: scale(0.5, 0.5);
-      padding-left: 0; } }
+      padding-left: 70px; } }
   @keyframes resizeImg {
     0% {
       -webkit-transform: scale(0.5, 0.5);
               transform: scale(0.5, 0.5);
-      padding-left: 0; }
+      padding-left: 70px; }
     100% {
       -webkit-transform: scale(0.5, 0.5);
               transform: scale(0.5, 0.5);
-      padding-left: 0; } } }
+      padding-left: 70px; } }
+  @-webkit-keyframes resize {
+    0% {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px; }
+    100% {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px; } }
+  @keyframes resize {
+    0% {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px; }
+    100% {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: -55px; } }
+  @-webkit-keyframes moveSelection {
+    0% {
+      margin-left: -50px; }
+    100% {
+      margin-left: -50px; } }
+  @keyframes moveSelection {
+    0% {
+      margin-left: -50px; }
+    100% {
+      margin-left: -50px; } }
+  .changeSelection {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-name: moveSelection;
+            animation-name: moveSelection;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; } }
