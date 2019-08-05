@@ -2,37 +2,50 @@
 
     @keyframes resize {
         0%{
-          margin-top: 50px;
-          margin-bottom: 50px;
+          margin-top: 0;
+          margin-bottom: 0;
         }
        100% {
-          margin-top: 50px;
-          margin-bottom: 50px;
+          margin-top: 0;
+          margin-bottom: 0;
         }
     }
 
-    // @keyframes resizeImg {
-    //     0%{
-    //     transform: scale(0.5, 0.5)
-    //     }
-    //    100% {
-    //     transform: scale(0.5, 0.5)
-    //     }
-    //   }
-
-    .backgroundResize {
+    .containerResize {
         animation-duration: 1.5s;
         animation-name: resize;
         animation-iteration-count: infinite;
     }
 
+    @keyframes resizeImg {
+        0%{
+          transform: scale(0.5, 0.5);
+          padding-left: 70px;
+        }
+       100% {
+        transform: scale(0.5, 0.5);
+        padding-left: 70px;
 
-    // .imgResize {
-    //     animation-duration: 1.5s;
-    //     animation-name: resizeImg;
-    //     animation-iteration-count: infinite;
-    // }
+        }
+      }
 
+    .imgResize {
+        animation-duration: 1.5s;
+        animation-name: resizeImg;
+        animation-iteration-count: infinite;
+    }
+}
 
+@media only screen and (min-width:1240px) {
+  @keyframes resizeImg {
+    0%{
+      transform: scale(0.5, 0.5);
+      padding-left: 0;
+    }
+   100% {
+    transform: scale(0.5, 0.5);
+    padding-left: 0;
+    }
+  }
 }
     

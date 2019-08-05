@@ -4,14 +4,11 @@ $(function () {
       let $selection = $('.menu').val()
       console.log($selection)
 
-    // $(".logo").toggleClass("imgResize");
-    $(".container").toggleClass("backgroundResize");
+    $(".logo").toggleClass("imgResize");
+    $(".container").toggleClass("containerResize");
 
-
-
-       
-      // let $target = event.target
-      // console.log($(event.target).val())
+      let $target = $(event.target).val()
+      console.log($target)
     
       $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$selection}.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e`)
       .done(function(data) {
@@ -21,6 +18,7 @@ $(function () {
         console.log($results)
 
         for (let $i=0; $i < $($results).length; $i++) {
+
             for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
 
               let $img = $results[$i].multimedia[4].url
@@ -33,14 +31,14 @@ $(function () {
                 $type = true;
               $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
               } 
-              if ($($results).length > 12){
-               console.log("theres more than 12")
-              } 
+              // if ($results > 12){
+              //  console.log($results)
+    
+              // } 
           }
         }
-              let $newsC = $(".newsContainer")
-              $newsC.hide()   
-              $newsC.toggle('slow').show()
+              $(".newsContainer").hide();
+              $(".newsContainer").toggle('slow').show();
       })
 
              .fail(function(){

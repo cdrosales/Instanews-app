@@ -52,6 +52,9 @@ body {
   color: #ffffff;
   background-color: black; }
 
+footer {
+  color: #c2c2c2; }
+
 .container {
   margin: 225px 18% 250px 18%;
   display: -webkit-box;
@@ -135,29 +138,73 @@ footer {
         -ms-flex-pack: start;
             justify-content: flex-start; }
   .results {
-    display: grid;
     grid-template-columns: repeat(4, minmax(310px, 100%));
     grid-template-rows: repeat(3, 400px); } }
 
 @media only screen and (min-width: 600px) {
   @-webkit-keyframes resize {
     0% {
-      margin-top: 50px;
-      margin-bottom: 50px; }
+      margin-top: 0;
+      margin-bottom: 0; }
     100% {
-      margin-top: 50px;
-      margin-bottom: 50px; } }
+      margin-top: 0;
+      margin-bottom: 0; } }
   @keyframes resize {
     0% {
-      margin-top: 50px;
-      margin-bottom: 50px; }
+      margin-top: 0;
+      margin-bottom: 0; }
     100% {
-      margin-top: 50px;
-      margin-bottom: 50px; } }
-  .backgroundResize {
+      margin-top: 0;
+      margin-bottom: 0; } }
+  .containerResize {
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
     -webkit-animation-name: resize;
             animation-name: resize;
     -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite; }
+  @-webkit-keyframes resizeImg {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 70px; }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 70px; } }
+  @keyframes resizeImg {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 70px; }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 70px; } }
+  .imgResize {
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
+    -webkit-animation-name: resizeImg;
+            animation-name: resizeImg;
+    -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite; } }
+
+@media only screen and (min-width: 1240px) {
+  @-webkit-keyframes resizeImg {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 0; }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 0; } }
+  @keyframes resizeImg {
+    0% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 0; }
+    100% {
+      -webkit-transform: scale(0.5, 0.5);
+              transform: scale(0.5, 0.5);
+      padding-left: 0; } } }
