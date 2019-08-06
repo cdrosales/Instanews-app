@@ -20,12 +20,9 @@
     @keyframes resizeImg {
         0%{
           transform: scale(0.5, 0.5); 
-          padding-left: 70px;
         }
        100% {
         transform: scale(0.5, 0.5);
-        padding-left: 70px;
-
         }
       }
 
@@ -76,6 +73,6 @@
     animation-duration: 1.5s;
     animation-name: moveSelection;
     animation-iteration-count: infinite;
-}
+  }
 }
     
