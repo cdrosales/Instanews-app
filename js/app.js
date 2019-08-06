@@ -7,6 +7,7 @@ $(function () {
     $(".logo").toggleClass("imgResize");
     $(".container").toggleClass("containerResize");
     $(".selection").toggleClass("changeSelection");
+    $(".loader").toggleClass("changeLoader");
 
 
       let $target = $(event.target).val()
@@ -30,15 +31,15 @@ $(function () {
  
               if ($type === "image"){
                 $type = true;
-              $(".results").append(`<div class="grid"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
-              } 
-              // if ($results > 12){
-              //  console.log($results)
-              // } 
+              } if ($j > 12){
+                return false;
+              }
+              $(".results").append(`<div class="grid ${$selection}"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
           }
         }
               $(".newsContainer").hide();
               $(".newsContainer").toggle('slow').show();
+              // $(".loader").show();
       })
 
              .fail(function(){
