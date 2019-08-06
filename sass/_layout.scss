@@ -35,7 +35,7 @@ footer{
         .grid{ 
             position: relative;
 
-            img {
+            .image {
             background-position: center;
             object-fit: cover;
             width: 100%;
@@ -58,8 +58,6 @@ footer{
     }
 }
 
-
-//TABLET
 @media only screen and (min-width:600px) { 
 
     .container{
@@ -76,11 +74,9 @@ footer{
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 414px));
     grid-template-rows: repeat(4, 400px);
-
     }
 }
 
-//DESKTOP VIEW
 @media only screen and (min-width:1240px) {
     .container{
         margin-left: 3%;

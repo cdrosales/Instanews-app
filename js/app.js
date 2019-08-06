@@ -14,7 +14,6 @@ $(function () {
     
       $.getJSON(`https://api.nytimes.com/svc/topstories/v2/${$selection}.json?api-key=QcnDFNG7J6qlWHGfO0jTiGUL4b2ieG7e`)
       .done(function(data) {
-      // console.log(data)
 
         let $results = (data.results)
         console.log($results)
@@ -31,11 +30,10 @@ $(function () {
  
               if ($type === "image"){
                 $type = true;
-              $(".results").append(`<div class="grid"><img src="${$img}"><p>${$caption}</p></div>`);
+              $(".results").append(`<div class="grid"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
               } 
               // if ($results > 12){
               //  console.log($results)
-    
               // } 
           }
         }
