@@ -20,6 +20,8 @@ $(function () {
         console.log($results)
 
         for (let $i=0; $i < $($results).length; $i++) {
+          // while loop .. append - when it appends - count 
+          // when count reaches certain amount stop
 
             for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
 
@@ -34,12 +36,16 @@ $(function () {
               } if ($j > 12){
                 return false;
               }
-              $(".results").append(`<div class="grid ${$selection}"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
-          }
+              $(".results").prepend(`<div class="grid ${$selection}"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
+              // $(".results").clear();
+              
+              // use instead of append- appends meand add on
+            }
         }
               $(".newsContainer").hide();
               $(".newsContainer").toggle('slow').show();
               // $(".loader").show();
+
       })
 
              .fail(function(){
