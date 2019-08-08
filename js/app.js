@@ -19,27 +19,28 @@ $(function () {
         let $results = (data.results)
         console.log($results)
 
+
+
+
+        $(".results").empty();
+
         for (let $i=0; $i < $($results).length; $i++) {
           // while loop .. append - when it appends - count 
           // when count reaches certain amount stop
-
             for (let $j=0; $j < $($results[$i].multimedia[4]).length; $j++) {
 
               let $img = $results[$i].multimedia[4].url
-
               let $caption = $results[$i].abstract
-
               let $type = $results[$i].multimedia[4].type
  
               if ($type === "image"){
                 $type = true;
-              } if ($j > 12){
+              } if ($j === 12){
                 return false;
               }
-              $(".results").prepend(`<div class="grid ${$selection}"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
-              // $(".results").clear();
               
-              // use instead of append- appends meand add on
+              $(".results").prepend(`<div class="grid ${$selection}"><img src="${$img}" class="image"><p>${$caption}</p></div>`);
+          
             }
         }
               $(".newsContainer").hide();
