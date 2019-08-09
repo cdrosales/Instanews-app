@@ -4,10 +4,10 @@ $(function () {
       let $selection = $('.menu').val()
       console.log($selection)
 
-    $(".logo").toggleClass("imgResize");
-    $(".container").toggleClass("containerResize");
-    $(".selection").toggleClass("changeSelection");
-    $(".loader").toggleClass("changeLoader");
+        $(".logo").toggleClass("imgResize");
+        $(".container").toggleClass("containerResize");
+        $(".selection").toggleClass("changeSelection");
+        $(".loader").toggleClass("changeLoader");
 
 
       let $target = $(event.target).val()
@@ -41,7 +41,9 @@ $(function () {
 
               $(".newsContainer").hide();
               $(".newsContainer").toggle('slow').show();
-              // $(".loader").show();
+
+              $(".loaderContainer").hide();
+              $(".loaderContainer").toggle('slow').show();
 
       })
 
@@ -49,6 +51,10 @@ $(function () {
               alert("your request didn't go through")
             })   
     })
+
+    
+  
+     
 })
 
 

@@ -120,12 +120,19 @@ footer {
     margin: 0 0 0 3px;
     text-transform: uppercase; }
 
+.loaderContainer {
+  display: none;
+  height: 300px; }
+
+.loader {
+  visibility: hidden;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: translateX(10%);
+          transform: translateX(10%); }
+
 .newsContainer {
   display: none; }
-  .newsContainer .loader {
-    width: 300px;
-    height: 300px;
-    margin: 0 20%; }
   .newsContainer .results {
     display: grid; }
     .newsContainer .results .grid {
@@ -148,6 +155,9 @@ footer {
         background: linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%); }
 
 @media only screen and (min-width: 600px) {
+  .loader {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%); }
   .container {
     margin: 250px 9%;
     display: grid;
@@ -161,6 +171,10 @@ footer {
     grid-template-rows: repeat(4, 400px); } }
 
 @media only screen and (min-width: 1240px) {
+  .loader {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
+    margin-left: 320px; }
   .container {
     margin-left: 3%;
     grid-template-columns: 25% 25% 50%; }
@@ -177,15 +191,15 @@ footer {
 
 @-webkit-keyframes resize {
   0% {
-    margin: 50px 0; }
+    margin: 20px 0; }
   100% {
-    margin: 50px 0; } }
+    margin: 20px 0; } }
 
 @keyframes resize {
   0% {
-    margin: 50px 0; }
+    margin: 20px 0; }
   100% {
-    margin: 50px 0; } }
+    margin: 20px 0; } }
 
 .containerResize {
   -webkit-animation-duration: 1.5s;
@@ -193,7 +207,29 @@ footer {
   -webkit-animation-name: resize;
           animation-name: resize;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite; }
+          animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }
+
+@-webkit-keyframes loaderV {
+  50% {
+    visibility: hidden; }
+  100% {
+    visibility: visible; } }
+
+@keyframes loaderV {
+  50% {
+    visibility: hidden; }
+  100% {
+    visibility: visible; } }
+
+.changeLoader {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: loaderV;
+          animation-name: loaderV;
+  -webkit-animation-iteration-count: 1s;
+          animation-iteration-count: 1s; }
 
 @media only screen and (min-width: 600px) {
   @-webkit-keyframes resize {
@@ -226,7 +262,9 @@ footer {
     -webkit-animation-name: resizeImg;
             animation-name: resizeImg;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; } }
+            animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; } }
 
 @media only screen and (min-width: 1240px) {
   @-webkit-keyframes resizeImg {
@@ -273,4 +311,6 @@ footer {
     -webkit-animation-name: moveSelection;
             animation-name: moveSelection;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite; } }
+            animation-iteration-count: infinite;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards; } }
