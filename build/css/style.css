@@ -212,24 +212,31 @@ footer {
           animation-fill-mode: forwards; }
 
 @-webkit-keyframes loaderV {
-  50% {
+  0% {
     visibility: hidden; }
+  50% {
+    visibility: visible; }
   100% {
-    visibility: visible; } }
+    visibility: hidden; } }
 
 @keyframes loaderV {
-  50% {
+  0% {
     visibility: hidden; }
+  50% {
+    visibility: visible; }
   100% {
-    visibility: visible; } }
+    visibility: hidden; } }
 
 .changeLoader {
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   -webkit-animation-name: loaderV;
           animation-name: loaderV;
-  -webkit-animation-iteration-count: 1s;
-          animation-iteration-count: 1s; }
+  -webkit-animation-iteration-count: 2s;
+          animation-iteration-count: 2s; }
+
+.hidden {
+  display: none; }
 
 @media only screen and (min-width: 600px) {
   @-webkit-keyframes resize {
